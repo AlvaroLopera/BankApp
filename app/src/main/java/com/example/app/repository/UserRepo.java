@@ -12,4 +12,6 @@ public interface UserRepo extends JpaRepository <UserEntity, Long> {
 
     UserEntity getUserByEmail ( String email );
 
+    UserEntity getUserByAccountNumber ( String number );
+
 }

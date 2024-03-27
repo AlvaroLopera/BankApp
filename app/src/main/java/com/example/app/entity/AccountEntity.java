@@ -1,5 +1,118 @@
 package com.example.app.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table ( name = "Accounts" )
 public class AccountEntity {
     
+    @Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+
+	@Column(unique = true, nullable = false)
+	private String accountNumber;
+    @Column(nullable = false)
+	private double balance;
+    @Column(nullable = false)
+	private String account_type = "Saving";
+    @Column(nullable = false)
+	private String branch = "BNT";
+    @Column(nullable = false)
+	private String IFSC_code = "BNT001";
+	@Column(nullable = false)
+    private String Pin;
+    @Column(nullable = false)
+	private String accountstatus;
+    
+	@OneToOne
+	@JoinColumn(name = "user_id")
+	private UserEntity user;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public String getAccount_type() {
+		return account_type;
+	}
+
+	public void setAccount_type(String account_type) {
+		this.account_type = account_type;
+	}
+
+	public String getBranch() {
+		return branch;
+	}
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+	public String getIFSC_code() {
+		return IFSC_code;
+	}
+
+	public void setIFSC_code(String iFSC_code) {
+		IFSC_code = iFSC_code;
+	}
+
+	public UserEntity getUser() {
+		return user;
+	}
+
+	public void setUser(UserEntity user) {
+		this.user = user;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", accountNumber=" + accountNumber + ", balance=" + balance + ", account_type="
+				+ account_type + ", branch=" + branch + ", IFSC_code=" + IFSC_code + ", user=" + user + "]";
+	}
+
+	public String getPin() {
+		return Pin;
+	}
+
+	public void setPin(String pin) {
+		this.Pin = pin;
+	}
+
+	public String getAccountstatus() {
+		return accountstatus;
+	}
+
+	public void setAccountstatus(String accountstatus) {
+		this.accountstatus = accountstatus;
+	}
+
+
 }

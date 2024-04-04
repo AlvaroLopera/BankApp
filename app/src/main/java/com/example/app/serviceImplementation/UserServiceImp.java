@@ -9,6 +9,7 @@ import com.example.app.exceptions.UserValidation;
 import com.example.app.repository.UserRepo;
 import com.example.app.service.AccountService;
 import com.example.app.service.UserService;
+import com.example.app.util.LoggedinUser;
 
 @Service
 public class UserServiceImp implements UserService {
@@ -59,8 +60,8 @@ public class UserServiceImp implements UserService {
 
     @Override
     public UserEntity updateUser(UserEntity user) {
-        /*
-        UserEntity existingUser = userRepository.findByAccountAccountNumber(LoggedinUser.getAccountNumber());
+       
+        UserEntity existingUser = userRepository.getUserByAccountNumber(LoggedinUser.getAccountNumber());
         if(user.getEmail() != null){
             if(user.getEmail().isEmpty())
                 throw new UserValidation("Email can't be empty");
@@ -83,6 +84,5 @@ public class UserServiceImp implements UserService {
             existingUser.setAddress(user.getAddress());
         }
         return userRepository.save(existingUser);
-    */
     }
 }

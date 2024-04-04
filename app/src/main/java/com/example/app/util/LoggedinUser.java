@@ -2,12 +2,14 @@ package com.example.app.util;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.User;
 import com.example.app.exceptions.NotFoundException;
 
 public class LoggedinUser {
     
     public static String getAccountNumber() {
-	    /*    
+	     
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 	        
         if (authentication != null) {
@@ -24,7 +26,4 @@ public class LoggedinUser {
 	        }
 	        throw new NotFoundException("Account number not found in Security Context.");
 	}
-*/
-    return null;
-}
 }

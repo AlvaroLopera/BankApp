@@ -2,29 +2,52 @@ package com.example.app.dto;
 
 public class AccountResponse {
 
-    public void setAccountNumber(String accountNumber) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setAccountNumber'");
+    private String accountNumber;
+    private double balance;
+    private String accountType;
+    private String branch;
+    private String IFSCCode;
+
+    // Getters and setters
+
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void setAccountType(String account_type) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setAccountType'");
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 
     public void setBalance(double balance) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setBalance'");
+        this.balance = balance;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public String getBranch() {
+        return branch;
     }
 
     public void setBranch(String branch) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setBranch'");
+        this.branch = branch;
     }
 
-    public void setIFSCCode(String ifsc_code) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'setIFSCCode'");
+    public String getIFSCCode() {
+        return IFSCCode;
+    }
+
+    public void setIFSCCode(String IFSCCode) {
+        this.IFSCCode = IFSCCode;
     }
     
 }

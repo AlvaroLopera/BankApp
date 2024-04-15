@@ -23,9 +23,7 @@ Ejecución de la aplicación
     Modifique el archivo application.properties ubicado en src/main/resources con la configuración de su base de datos y correo electrónico.
     Ejecute el siguiente comando en el directorio raíz del proyecto para compilar y ejecutar la aplicación:
 
-bash
-
-mvn spring-boot:run
+    bash: mvn spring-boot:run
 
     La aplicación estará disponible en http://localhost:8180.
 

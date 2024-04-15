@@ -3,15 +3,19 @@ package com.example.app.config;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 
 @Configuration
+@PropertySource(value = "classpath:application.properties")
+@EnableAutoConfiguration
 @EnableCaching
 public class CacheConfig {
     

@@ -1,7 +1,10 @@
 package com.example.app.service;
 
+import org.springframework.stereotype.Service;
+
 import com.example.app.entity.UserEntity;
 
+@Service
 public interface UserService {
     
     UserEntity registerUser(UserEntity user);

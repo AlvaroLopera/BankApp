@@ -1,8 +1,10 @@
 package com.example.app.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -23,6 +25,8 @@ import com.example.app.serviceImplementation.JWTUserDetailsService;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
+@PropertySource(value = "classpath:application.properties")
+@EnableAutoConfiguration
 public class WebSecurityConfig {
     
     @Autowired

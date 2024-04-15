@@ -1,6 +1,7 @@
 package com.example.app.serviceImplementation;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +23,7 @@ public class TransactionServiceImp implements TransactionService {
 
 	 @Override
 	 public List<TransactionDTO> getAllTransactionsByAccountNumber(String accountNumber) {
-	    /*
+	
         List<TransactionEntity> transactions = transactionRepository.findBySourceAccount_AccountNumberOrTargetAccount_AccountNumber(accountNumber, accountNumber);
 	     
 	    List<TransactionDTO> transactionDTOs = transactions.stream().map(transactionMapper::toDto)
@@ -30,7 +31,7 @@ public class TransactionServiceImp implements TransactionService {
 	             .collect(Collectors.toList());
 
 	     return transactionDTOs;
-	 } */
+	 } 
 
 
 }

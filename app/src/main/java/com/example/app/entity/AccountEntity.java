@@ -36,6 +36,8 @@ public class AccountEntity {
 	@JoinColumn(name = "user_id")
 	private UserEntity user;
 
+	
+
 	public Long getId() {
 		return id;
 	}

@@ -13,6 +13,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
+@SuppressWarnings("deprecation")
 @Component
 public class JwtTokenUtil implements Serializable {
 
@@ -37,8 +38,7 @@ public class JwtTokenUtil implements Serializable {
 	}
 
 	// for retrieving any information from token we will need the secret key
-	@SuppressWarnings("deprecation")
-    private Claims getAllClaimsFromToken(String token) {
+	private Claims getAllClaimsFromToken(String token) {
 		return Jwts.parser().setSigningKey(secret).build().parseSignedClaims(token).getPayload();
 	}
 
@@ -53,8 +53,7 @@ public class JwtTokenUtil implements Serializable {
 		return doGenerateToken(claims, userDetails.getUsername());
 	}
 	
-	@SuppressWarnings("deprecation")
-    private String doGenerateToken(Map<String, Object> claims, String subject) {
+	private String doGenerateToken(Map<String, Object> claims, String subject) {
 
 		return Jwts.builder().setClaims(claims).setSubject(subject).setIssuedAt(new Date(System.currentTimeMillis()))
 				.setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))

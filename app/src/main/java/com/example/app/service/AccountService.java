@@ -1,8 +1,11 @@
 package com.example.app.service;
 
+import org.springframework.stereotype.Service;
+
 import com.example.app.entity.AccountEntity;
 import com.example.app.entity.UserEntity;
 
+@Service
 public interface AccountService {
     
     public AccountEntity createAccount(UserEntity user);

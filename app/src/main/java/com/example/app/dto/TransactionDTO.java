@@ -25,10 +25,10 @@ public class TransactionDTO {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	public TransactionType getTransaction_type() {
+	public TransactionTypeEntity getTransaction_type() {
 		return transaction_type;
 	}
-	public void setTransaction_type(TransactionType transaction_type) {
+	public void setTransaction_type(TransactionTypeEntity transaction_type) {
 		this.transaction_type = transaction_type;
 	}
 	public Date getTransaction_date() {

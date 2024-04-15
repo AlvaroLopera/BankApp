@@ -2,6 +2,10 @@ package com.example.app.service;
 
 import java.util.concurrent.CompletableFuture;
 
+import org.springframework.stereotype.Service;
+
+
+@Service
 public interface OTPService {
     
     String generateOTP(String accountNumber);
